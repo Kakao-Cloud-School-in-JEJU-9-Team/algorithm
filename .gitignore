@@ -1,0 +1,31 @@
+# 필요하신거 있으시면 추가해주세요!
+# 일단 제가 쓰는걸로 추가해놨습니다.
+
+# Reference
+Ref.txt
+
+# Virtual environments
+venv/
+env/
+.env
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Compiled Python files
+*.pyc
+
+# Log files
+*.log
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# IDEA
+*.iml
+out/
+.idea/
+.vscode/
