@@ -44,7 +44,7 @@ class Main {
 			return;
 		}
 
-		for (int i = idx; i < maxPerson; i++) {
+		for (int i = idx; i < maxPerson; i++) {  // 중복 조합 고려해야함.
 			if (!team[i]) {  // (123), (231), (132) 중복 해결 => 이미 방문한 것은 고려x
 				team[i] = true;  // 방문시 true 팀(start 팀)으로
 				matchTeam(i + 1, trueTeamMemberNum + 1);  // matchTeam::Call
