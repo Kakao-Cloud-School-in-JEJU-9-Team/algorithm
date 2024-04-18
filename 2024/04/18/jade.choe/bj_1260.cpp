@@ -1,5 +1,6 @@
 // https://www.acmicpc.net/problem/1260
 // 백준 1260-DFS와 BFS
+// https://velog.io/@lucky-korma/DFS-BFS%EC%9D%98-%EC%84%A4%EB%AA%85-%EC%B0%A8%EC%9D%B4%EC%A0%90
 
 #include <iostream>
 #include <vector>
