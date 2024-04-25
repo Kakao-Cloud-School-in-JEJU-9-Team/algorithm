@@ -1,4 +1,4 @@
-# (11724)(Gold 2) [보석 도둑](https://www.acmicpc.net/problem/1202)
+# (1202)(Gold 2) [보석 도둑](https://www.acmicpc.net/problem/1202)
 
 ### 제한사항
 시간 제한: 2초   
