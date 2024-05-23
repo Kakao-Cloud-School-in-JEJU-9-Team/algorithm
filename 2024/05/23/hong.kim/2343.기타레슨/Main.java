@@ -23,19 +23,19 @@ public class Main {
 
 		lectureTimeMap = new int[lectureNum];
 
-		int minTotalTime = Integer.MAX_VALUE;  // 최소 강의 시간 (이진 탐색 시작)
-		int maxTotalTime = 0;  // 최대 강의 시간 (이진 탐색 종료)
+		int maxLectureTime = Integer.MIN_VALUE;  // 최대 강의 시간 (이진 탐색 시작)
+		int totalTime = 0;  // 전체 강의 시간 (이진 탐색 종료)
 
 		for (int i = 0; i < lectureNum; i++) {
 			int value = scanner.nextInt();
 
-			minTotalTime = Math.min(minTotalTime, value);
-			maxTotalTime += value;
+			maxLectureTime = Math.max(maxLectureTime, value);
+			totalTime += value;
 			lectureTimeMap[i] = value;
 		}
 
-		while (minTotalTime <= maxTotalTime) {
-			int middleTime = (minTotalTime + maxTotalTime) / 2;  // 현재의 중앙 시간 값
+		while (maxLectureTime <= totalTime) {
+			int middleTime = (maxLectureTime + totalTime) / 2;  // 현재의 중앙 시간 값
 
 			int nowTotalLectureTime = 0;
 			int bluRayUseCount = 0;
@@ -53,12 +53,12 @@ public class Main {
 				bluRayUseCount++;
 
 			if (bluRayUseCount > bluRay) {  // 현재의 middleTime 으로는 주어진 블루레이 개수에 넣을 수 없을 경우
-				minTotalTime = middleTime + 1;
+				maxLectureTime = middleTime + 1;
 				continue;
 			}
-			maxTotalTime = middleTime - 1;
+			totalTime = middleTime - 1;
 		}
 
-		System.out.println(minTotalTime);
+		System.out.println(maxLectureTime);
 	}
 }
